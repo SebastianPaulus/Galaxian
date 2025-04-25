@@ -12,6 +12,13 @@ FetchContent_Declare(SFML
     SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(Galaxian src/main.cpp)
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)
+
+add_executable(Galaxian ${SOURCES})
 target_compile_features(Galaxian PRIVATE cxx_std_17)
-target_link_libraries(Galaxian PRIVATE SFML::Graphics)
+target_link_libraries(Galaxian
+    PRIVATE
+        SFML::Graphics
+        SFML::Audio
+)
+
