@@ -21,4 +21,3 @@ target_link_libraries(Galaxian
         SFML::Graphics
         SFML::Audio
 )
-
