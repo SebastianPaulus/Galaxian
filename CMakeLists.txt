@@ -12,6 +12,6 @@ FetchContent_Declare(SFML
     SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(Galaxian src/main.cpp "include/vec2.h" "src/vec2.cpp")
+add_executable(Galaxian src/main.cpp "include/vec2.h" )
 target_compile_features(Galaxian PRIVATE cxx_std_17)
 target_link_libraries(Galaxian PRIVATE SFML::Graphics)
